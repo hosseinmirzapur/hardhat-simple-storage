@@ -1,0 +1,16 @@
+{
+	"name": "hardhat-simple-storage",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile": "npx hardhat compile"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@nomicfoundation/hardhat-toolbox": "^2.0.2",
+		"hardhat": "^2.14.1"
+	}
+}
