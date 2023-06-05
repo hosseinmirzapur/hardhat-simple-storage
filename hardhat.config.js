@@ -1,6 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox")
 require("dotenv").config()
 require("./tasks/block-number")
+require("hardhat-gas-reporter")
+require("solidity-coverage")
 
 const sepoliaConfig = {
 	url: process.env.SEPOLIA_URL,
@@ -17,5 +19,13 @@ module.exports = {
 	defaultNetwork: "hardhat",
 	etherscan: {
 		apiKey: process.env.ETHERSCAN_API_KEY,
+	},
+	gasReporter: {
+		enabled: true,
+		outputFile: "gas-report.txt",
+		noColors: true,
+		currency: "USD",
+		coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+		token: "MATIC",
 	},
 }
